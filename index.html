@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ore Fagbamiye | CodeSquad Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated background (drawn by script.js) -->
+  <canvas id="bg"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <a href="#home" class="logo">&lt;ore /&gt;</a>
+    <span class="badge">CodeSquad Portfolio</span>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Mini Course</a></li>
+      <li><a href="#travel">Travel</a></li>
+      <li><a href="#paths">Tech Paths</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">ore@codesquad: ~</span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="prompt">$</span> whoami</p>
+        <h1>Oreoluwa "Ore" Fagbamiye</h1>
+        <p><span class="prompt">$</span> cat role.txt</p>
+        <p class="typed"><span id="typed"></span><span class="cursor">▋</span></p>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint">scroll ↓</a>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section reveal">
+    <h2 class="section-title"><span>01.</span> About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Hey, I'm <strong>Ore</strong>, an IT and cybersecurity professional learning
+          full-stack development with <strong>CodeSquad</strong>. I started out as a field
+          technician on multi-site rollouts (POS systems, networking, cabling, cameras) and
+          helped support the rebuild after the 2022 Fulton County cyberattack.
+        </p>
+        <p>
+          Now I'm learning to build the software side so I can help secure apps
+          before they ship. I'm also a founder, so I like learning things I can actually use.
+        </p>
+      </div>
+      <div class="info-card">
+        <p class="label">// where I'm from</p>
+        <p class="big">📍 Gwinnett County, Georgia</p>
+        <p class="label">// currently learning</p>
+        <div class="chips">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MINI COURSE WORK ===== -->
+  <section id="work" class="section reveal">
+    <h2 class="section-title"><span>02.</span> CodeSquad Mini Course Work</h2>
+    <p class="section-sub">Click any screenshot to enlarge it.</p>
+
+    <!-- To add your screenshots: put the images in the "images" folder
+         and make sure the file names match the src below. -->
+    <div class="gallery">
+      <figure class="shot">
+        <img src="images/assignment-1.png" alt="Mini Course assignment 1 screenshot">
+        <figcaption><span>Assignment 01</span> Topic title here</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/assignment-2.png" alt="Mini Course assignment 2 screenshot">
+        <figcaption><span>Assignment 02</span> Topic title here</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/assignment-3.png" alt="Mini Course assignment 3 screenshot">
+        <figcaption><span>Assignment 03</span> Topic title here</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== TRAVEL ===== -->
+  <section id="travel" class="section reveal">
+    <h2 class="section-title"><span>03.</span> Where I Want to Travel</h2>
+    <div class="boarding-pass">
+      <div class="bp-main">
+        <p class="bp-airline">✈ CODESQUAD AIRWAYS · BOARDING PASS</p>
+        <div class="bp-route">
+          <div>
+            <p class="bp-code">ATL</p>
+            <p class="bp-city">Atlanta, GA</p>
+          </div>
+          <div class="bp-plane">- - - ✈ - - -</div>
+          <div>
+            <!-- Change the code + city to your dream destination -->
+            <p class="bp-code" id="destCode">???</p>
+            <p class="bp-city" id="destCity">Destination</p>
+          </div>
+        </div>
+        <p class="bp-why" id="destWhy">Why I want to go: add your reason here.</p>
+      </div>
+      <div class="bp-stub">
+        <p class="label">PASSENGER</p><p>FAGBAMIYE / ORE</p>
+        <p class="label">SEAT</p><p>1A</p>
+        <p class="label">CLASS</p><p>Dev</p>
+        <div class="barcode"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH PATHS ===== -->
+  <section id="paths" class="section reveal">
+    <h2 class="section-title"><span>04.</span> 3 Professions I Want to Explore</h2>
+    <p class="section-sub">Hover (or tap) a card to flip it.</p>
+    <div class="cards">
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="icon">🛡️</span><h3>Application Security Engineer</h3><p class="tag">the goal</p></div>
+          <div class="flip-back"><p>I'd rather stop the next breach in a pull request than clean up after it. AppSec means reviewing code, threat modeling, and building security checks right into the pipeline.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="icon">💻</span><h3>Junior Full-Stack Developer</h3><p class="tag">entry level</p></div>
+          <div class="flip-back"><p>JavaScript, React, Node, and MongoDB end to end. This is the foundation I'm building at CodeSquad, and it's the credibility I need to review other developers' code.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><span class="icon">🤖</span><h3>AI Application Developer</h3><p class="tag">entry level</p></div>
+          <div class="flip-back"><p>I already build AI agents and a RAG chatbot. I want to ship AI features that are useful and secure, following the OWASP Top 10 for LLMs.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONNECT ===== -->
+  <section id="connect" class="section reveal">
+    <h2 class="section-title"><span>05.</span> Let's Connect</h2>
+    <div class="links">
+      <a class="link-btn" href="https://www.linkedin.com/in/oreoluwa-fagbamiye" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>
+        LinkedIn
+      </a>
+      <a class="link-btn" href="https://github.com/ocfagb" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Built from scratch with HTML, CSS &amp; JavaScript · © <span id="year"></span> Ore Fagbamiye</p>
+  </footer>
+
+  <!-- Lightbox for enlarged screenshots -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
