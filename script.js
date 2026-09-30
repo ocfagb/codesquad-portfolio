@@ -80,10 +80,21 @@ document.querySelectorAll(".flip-card").forEach((card) => {
   card.addEventListener("click", () => card.classList.toggle("flipped"));
 });
 
-// ===== 6. Footer year =====
+// ===== 6. Travel brochure: stamp your passport =====
+const stampCount = document.getElementById("stampCount");
+document.querySelectorAll(".dest").forEach((card) => {
+  const btn = card.querySelector(".stamp-btn");
+  btn.addEventListener("click", () => {
+    card.classList.toggle("stamped");
+    btn.textContent = card.classList.contains("stamped") ? "Stamped! ✓" : "Stamp my passport";
+    stampCount.textContent = document.querySelectorAll(".dest.stamped").length;
+  });
+});
+
+// ===== 7. Footer year =====
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ===== 7. Animated "network" background =====
+// ===== 8. Animated "network" background =====
 // Floating dots that connect with lines when close, a nod to my networking background.
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");

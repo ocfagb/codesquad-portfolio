@@ -106,30 +106,64 @@
 
   <!-- ===== TRAVEL ===== -->
   <section id="travel" class="section reveal">
-    <h2 class="section-title"><span>03.</span> Where I Want to Travel</h2>
-    <div class="boarding-pass">
-      <div class="bp-main">
-        <p class="bp-airline">✈ CODESQUAD AIRWAYS · BOARDING PASS</p>
-        <div class="bp-route">
-          <div>
-            <p class="bp-code">ATL</p>
-            <p class="bp-city">Atlanta, GA</p>
-          </div>
-          <div class="bp-plane">- - - ✈ - - -</div>
-          <div>
-            <!-- Change the code + city to your dream destination -->
-            <p class="bp-code" id="destCode">???</p>
-            <p class="bp-city" id="destCity">Destination</p>
-          </div>
+    <h2 class="section-title"><span>03.</span> Places I Want to Travel</h2>
+    <p class="section-sub">My travel brochure: three stops on my bucket list. Hit "Stamp my passport" on each one.</p>
+    <p class="passport-count">Passport stamps: <strong id="stampCount">0</strong> / 3</p>
+    <div class="brochure">
+      <article class="dest dest-green">
+        <div class="dest-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ZUMA_ROCK.jpg?width=1200" alt="Zuma Rock rising over the landscape near Abuja, Nigeria" loading="lazy">
+          <span class="dest-tag">Going home</span>
+          <div class="stamp" aria-hidden="true">LOS<small>VISITED</small></div>
         </div>
-        <p class="bp-why" id="destWhy">Why I want to go: add your reason here.</p>
-      </div>
-      <div class="bp-stub">
-        <p class="label">PASSENGER</p><p>FAGBAMIYE / ORE</p>
-        <p class="label">SEAT</p><p>1A</p>
-        <p class="label">CLASS</p><p>Dev</p>
-        <div class="barcode"></div>
-      </div>
+        <div class="dest-body">
+          <p class="dest-route">ATL <span>✈</span> LOS</p>
+          <h3>🇳🇬 Nigeria</h3>
+          <p class="dest-blurb">I'm Nigerian, so this trip is about roots: family, culture, and seeing the country I want to help build up.</p>
+          <p class="label">// must see</p>
+          <ul><li>Zuma Rock, the giant monolith near Abuja</li><li>Lekki Conservation Centre's canopy walkway in Lagos</li><li>Olumo Rock in Abeokuta</li></ul>
+          <p class="label">// must eat</p>
+          <p class="dest-eat">Jollof rice, suya, puff-puff</p>
+          <button class="stamp-btn" type="button">Stamp my passport</button>
+          <a class="credit" href="https://commons.wikimedia.org/wiki/File:ZUMA_ROCK.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>
+        </div>
+      </article>
+      <article class="dest dest-gold">
+        <div class="dest-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Arun_and_Sunset.jpg?width=1200" alt="Wat Arun temple at sunset in Bangkok, Thailand" loading="lazy">
+          <span class="dest-tag">Temples & islands</span>
+          <div class="stamp" aria-hidden="true">BKK<small>VISITED</small></div>
+        </div>
+        <div class="dest-body">
+          <p class="dest-route">ATL <span>✈</span> BKK</p>
+          <h3>🇹🇭 Thailand</h3>
+          <p class="dest-blurb">Golden temples, night markets, and crystal-clear islands. I want the full mix of city energy and beach.</p>
+          <p class="label">// must see</p>
+          <ul><li>Wat Arun on the Chao Phraya River</li><li>The Grand Palace</li><li>Island hopping around Phi Phi</li></ul>
+          <p class="label">// must eat</p>
+          <p class="dest-eat">Pad thai, tom yum, mango sticky rice</p>
+          <button class="stamp-btn" type="button">Stamp my passport</button>
+          <a class="credit" href="https://commons.wikimedia.org/wiki/File:Wat_Arun_and_Sunset.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>
+        </div>
+      </article>
+      <article class="dest dest-pink">
+        <div class="dest-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chureito_Pagoda_and_Mount_Fuji.jpg?width=1200" alt="Chureito Pagoda with Mount Fuji behind it, Japan" loading="lazy">
+          <span class="dest-tag">Tech & tradition</span>
+          <div class="stamp" aria-hidden="true">HND<small>VISITED</small></div>
+        </div>
+        <div class="dest-body">
+          <p class="dest-route">ATL <span>✈</span> HND</p>
+          <h3>🇯🇵 Japan</h3>
+          <p class="dest-blurb">Where futuristic tech meets centuries-old tradition. As someone going into tech, Tokyo is a must.</p>
+          <p class="label">// must see</p>
+          <ul><li>Mount Fuji from the Chureito Pagoda</li><li>Shibuya Crossing and Akihabara in Tokyo</li><li>The temples of Kyoto</li></ul>
+          <p class="label">// must eat</p>
+          <p class="dest-eat">Ramen, sushi, takoyaki</p>
+          <button class="stamp-btn" type="button">Stamp my passport</button>
+          <a class="credit" href="https://commons.wikimedia.org/wiki/File:Chureito_Pagoda_and_Mount_Fuji.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>
+        </div>
+      </article>
     </div>
   </section>
 
